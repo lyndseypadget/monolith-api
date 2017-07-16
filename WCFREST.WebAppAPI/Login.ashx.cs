@@ -35,16 +35,17 @@ namespace WCFREST.WebAppAPI
 			}
 
 			string jsonOutput = null;
-			if (success == false)
-			{
-				jsonOutput = "{\"Success\":\"False\"}";
-				context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
-				context.Response.AddHeader(@"Success", @"False");
-			}
-			else
-			{
-				jsonOutput = "{\"Success\":\"True\"}";
-			}
+			// if (success == false)
+			// {
+			// 	jsonOutput = "{\"Success\":\"False\"}";
+			// 	context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+			// 	context.Response.AddHeader(@"Success", @"False");
+			// }
+			// else
+			// {
+			// 	jsonOutput = "{\"Success\":\"True\"}";
+			// }
+			jsonOutput = "{\"Success\":\"True\"}";
 
 			context.Response.ContentType = "application/json";
 			context.Response.Write(jsonOutput);
