@@ -12,9 +12,9 @@ namespace PizzaApp.Controllers
     {
         Pizza[] pizzas = new Pizza[]
         {
-            new Pizza { Id = 1, Name = "Tomato Soup", Category = "Groceries", Price = 1 },
-            new Pizza { Id = 2, Name = "Yo-yo", Category = "Toys", Price = 3.75M },
-            new Pizza { Id = 3, Name = "Hammer", Category = "Hardware", Price = 16.99M }
+            new Pizza { Id = 1, Flavor = Flavor.Cheese.ToString(), PanStyle = PanStyle.Thin.ToString(), Crust = Crust.Original.ToString() },
+            new Pizza { Id = 2, Flavor = Flavor.Pepperoni.ToString(), PanStyle = PanStyle.Original.ToString(), Crust = Crust.Original.ToString() },
+            new Pizza { Id = 3, Flavor = Flavor.Veggie.ToString(), PanStyle = PanStyle.DeepDish.ToString(), Crust = Crust.WholeWheat.ToString() }
         };
 
         public IEnumerable<Pizza> GetAllPizzas()
