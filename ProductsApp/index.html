@@ -4,48 +4,6 @@
     <title>Pizza App</title>
 </head>
 <body>
-
-    <div>
-        <h2>All Pizza</h2>
-        <ul id="pizzas" />
-    </div>
-    <div>
-        <h2>Search by ID</h2>
-        <input type="text" id="prodId" size="5" />
-        <input type="button" value="Search" onclick="find();" />
-        <p id="pizza" />
-    </div>
-
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-    <script>
-    var uri = 'api/pizzas';
-
-    $(document).ready(function () {
-      // Send an AJAX request
-      $.getJSON(uri)
-          .done(function (data) {
-            // On success, 'data' contains a list of pizzas.
-            $.each(data, function (key, item) {
-              // Add a list item for the pizza.
-              $('<li>', { text: formatItem(item) }).appendTo($('#pizzas'));
-            });
-          });
-    });
-
-    function formatItem(item) {
-      return item.Flavor + ' - ' + item.PanStyle + " - " + item.Size;
-    }
-
-    function find() {
-      var id = $('#prodId').val();
-      $.getJSON(uri + '/' + id)
-          .done(function (data) {
-            $('#pizza').text(formatItem(data));
-          })
-          .fail(function (jqXHR, textStatus, err) {
-            $('#pizza').text('Error: ' + err);
-          });
-    }
-    </script>
+    Pizza API is a go!
 </body>
 </html>
