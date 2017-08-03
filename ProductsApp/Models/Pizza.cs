@@ -10,6 +10,6 @@ namespace PizzaApp.Models
         public int Id { get; set; }
         public String Flavor { get; set; }
         public String PanStyle { get; set; }
-        public String Crust { get; set; }
+        public String Size { get; set; }
     }
 }

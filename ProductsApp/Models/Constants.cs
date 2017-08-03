@@ -9,5 +9,5 @@ namespace PizzaApp.Models
 
     public enum PanStyle { Thin, Original, DeepDish }
 
-    public enum Crust { Original, WholeWheat }
+    public enum Size { Small, Medium, Large }
 }
